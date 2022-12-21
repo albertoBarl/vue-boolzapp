@@ -7,8 +7,8 @@
 .myContainer {
   background: linear-gradient(
     180deg,
-    rgb(0, 156, 120) 10%,
-    rgb(220, 220, 210) 10%
+    rgb(0, 156, 120) 100px,
+    rgb(220, 220, 210) 0px
   );
   width: 100vw;
   height: 100vh;
@@ -20,14 +20,32 @@
   height: 60vh;
 }
 
-.sideZapp {
-  background-color: grey;
-  height: 100%;
-  width: 20%;
+.mainZapp {
+  background-color: beige;
 }
 
-.mainZapp {
+.zappTop {
+  height: 50px;
+  width: 100%;
   background-color: lightgray;
+}
+
+/* ========================= SIDEZAPP ========================= */
+.newsZapp {
+  background-color: skyblue;
+  height: 50px;
+  width: 100%;
+}
+
+.sideZapp {
   height: 100%;
-  width: 80%;
+  width: 20%;
+  border-right: 1px solid rgba(128, 128, 128, 0.377);
+}
+
+.sideBody {
+  background-color: white;
+  height: calc(100% - 100px);
+  width: 100%;
+  overflow-y: auto;
 }
