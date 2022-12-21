@@ -3,10 +3,11 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
+      indConta: 0,
       contacts: [
         {
           name: "Michele",
-          avatar: "_1",
+          avatar: "./img/avatar_1.jpg",
           visible: true,
           messages: [
             {
@@ -28,7 +29,7 @@ createApp({
         },
         {
           name: "Fabio",
-          avatar: "_2",
+          avatar: "./img/avatar_2.jpg",
           visible: true,
           messages: [
             {
@@ -50,7 +51,7 @@ createApp({
         },
         {
           name: "Samuele",
-          avatar: "_3",
+          avatar: "./img/avatar_3.jpg",
           visible: true,
           messages: [
             {
@@ -72,7 +73,7 @@ createApp({
         },
         {
           name: "Alessandro B.",
-          avatar: "_4",
+          avatar: "./img/avatar_4.jpg",
           visible: true,
           messages: [
             {
@@ -89,7 +90,7 @@ createApp({
         },
         {
           name: "Alessandro L.",
-          avatar: "_5",
+          avatar: "./img/avatar_5.jpg",
           visible: true,
           messages: [
             {
@@ -106,7 +107,7 @@ createApp({
         },
         {
           name: "Claudia",
-          avatar: "_6",
+          avatar: "./img/avatar_6.jpg",
           visible: true,
           messages: [
             {
@@ -128,7 +129,7 @@ createApp({
         },
         {
           name: "Federico",
-          avatar: "_7",
+          avatar: "./img/avatar_7.jpg",
           visible: true,
           messages: [
             {
@@ -145,7 +146,7 @@ createApp({
         },
         {
           name: "Davide",
-          avatar: "_8",
+          avatar: "./img/avatar_8.jpg",
           visible: true,
           messages: [
             {

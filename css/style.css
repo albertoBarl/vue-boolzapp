@@ -16,36 +16,78 @@
 
 /* ========================= CONTAINER ========================= */
 .zappContainer {
-  width: 80vw;
-  height: 60vh;
+  width: 90vw;
+  height: 90vh;
 }
 
-.mainZapp {
-  background-color: beige;
-}
-
+/* topbar */
 .zappTop {
-  height: 50px;
+  height: 10%;
   width: 100%;
   background-color: lightgray;
 }
 
 /* ========================= SIDEZAPP ========================= */
-.newsZapp {
-  background-color: skyblue;
-  height: 50px;
-  width: 100%;
-}
-
 .sideZapp {
   height: 100%;
-  width: 20%;
+  width: 40%;
+  background-color: white;
   border-right: 1px solid rgba(128, 128, 128, 0.377);
 }
 
+/* topbar sidezapp content */
+.myAvatar,
+.interactions {
+  height: 100%;
+  align-items: center;
+}
+
+.myAvatar img {
+  height: 75%;
+}
+
+/* === sidebody === */
 .sideBody {
-  background-color: white;
-  height: calc(100% - 100px);
   width: 100%;
-  overflow-y: auto;
+  height: 90%;
+}
+
+/* app desktop news section */
+.newsZapp {
+  background-color: skyblue;
+  height: 10%;
+}
+
+/* chat section */
+.chatsSect {
+  height: calc(100% - 10%);
+}
+
+.searchZapp {
+  height: 10%;
+  border-bottom: 1px solid lightgray;
+}
+
+.othersChat {
+  height: calc(100% - 10%);
+}
+
+.singlePerson {
+  height: 85px;
+  border-bottom: 1px solid lightgrey;
+}
+
+/* avatars */
+.Avat {
+  height: 100%;
+}
+.Avat img {
+  height: 100%;
+}
+
+/* ========================= MAINZAPP ========================= */
+.mainZapp {
+  height: 100%;
+  width: 60%;
+  background-color: beige;
 }
