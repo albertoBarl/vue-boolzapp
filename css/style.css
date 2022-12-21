@@ -3,3 +3,31 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.myContainer {
+  background: linear-gradient(
+    180deg,
+    rgb(0, 156, 120) 10%,
+    rgb(220, 220, 210) 10%
+  );
+  width: 100vw;
+  height: 100vh;
+}
+
+/* ========================= CONTAINER ========================= */
+.zappContainer {
+  width: 80vw;
+  height: 60vh;
+}
+
+.sideZapp {
+  background-color: grey;
+  height: 100%;
+  width: 20%;
+}
+
+.mainZapp {
+  background-color: lightgray;
+  height: 100%;
+  width: 80%;
+}
