@@ -27,7 +27,7 @@
               <div class="theAvatar d-flex gap-2">
                 <img
                   name="theAvatarIMG"
-                  src="./img/avatar_io.jpg"
+                  :src="`./img/avatar${user.avatar}.jpg`"
                   alt="not available"
                   class="rounded-circle"
                 />
@@ -80,7 +80,7 @@
                   >
                     <div class="Avat me-2 p-2">
                       <img
-                        :src="contacts[index].avatar"
+                        :src="`./img/avatar${contacts[index].avatar}.jpg`"
                         alt="not available"
                         class="rounded-circle"
                       />
