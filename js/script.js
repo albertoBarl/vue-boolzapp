@@ -3,7 +3,7 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
-      indConta: 0,
+      activeChat: 0,
       user: {
         myname: "Sofia",
         avatar: "_io",
@@ -173,5 +173,10 @@ createApp({
         },
       ],
     };
+  },
+  methods: {
+    showChat(index) {
+      this.activeChat = index;
+    },
   },
 }).mount("#appBoolzapp");

@@ -26,12 +26,11 @@
             <div class="zappTop d-flex px-3 justify-content-between">
               <div class="theAvatar d-flex gap-2">
                 <img
-                  name="theAvatarIMG"
                   :src="`./img/avatar${user.avatar}.jpg`"
                   alt="not available"
                   class="rounded-circle"
                 />
-                <label class="fs-5">Sofia</label>
+                <label class="fs-5">{{user.myname}}</label>
               </div>
               <div class="interactions d-flex gap-3 fs-3">
                 <i class="fas fa-circle-notch"></i>
@@ -77,6 +76,7 @@
                   <div
                     class="singlePerson d-flex position-relative"
                     v-for="(element, index) in contacts"
+                    @click="showChat(index)"
                   >
                     <div class="Avat me-2 p-2">
                       <img
@@ -100,21 +100,21 @@
 
           <!-- chat window section -->
           <div class="mainZapp">
-            <!-- <div class="zappTop d-flex px-3 justify-content-between">
+            <!-- topbar -->
+            <div class="zappTop d-flex px-3 justify-content-between">
               <div class="theAvatar d-flex gap-2">
                 <img
-                  name="theAvatarIMG"
-                  src="./img/avatar_io.jpg"
+                  :src="`./img/avatar${contacts[activeChat].avatar}.jpg`"
                   alt="not available"
                   class="rounded-circle"
                 />
-                <label class="fs-5">Sofia</label>
+                <label class="fs-5">{{contacts[activeChat].name}}</label>
               </div>
               <div class="interactions d-flex gap-3 fs-3">
                 <i class="fas fa-search"></i>
                 <i class="fas fa-link"></i>
               </div>
-            </div> -->
+            </div>
           </div>
         </div>
       </div>

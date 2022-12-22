@@ -75,6 +75,7 @@
 .singlePerson {
   height: 85px;
   border-bottom: 1px solid lightgrey;
+  cursor: pointer;
 }
 
 /* avatars */
