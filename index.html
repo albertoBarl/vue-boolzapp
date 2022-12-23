@@ -99,7 +99,7 @@
           </div>
 
           <!-- chat window section -->
-          <div class="mainZapp">
+          <div class="mainZapp position-relative">
             <!-- topbar -->
             <div class="zappTop d-flex px-3 justify-content-between">
               <div class="theAvatar d-flex gap-2">
@@ -121,18 +121,44 @@
             </div>
 
             <!-- chat content -->
-            <div class="zappChat d-grid">
+            <div
+              class="zappChat px-3 d-flex flex-column"
+              v-for="(element, index) in contacts[activeChat].messages"
+              :class="(status = sent) ? 'justify-content-end' : 'justify-content-start' "
+            >
               <div
-                v-for="(element, index) in contacts[activeChat].messages"
-                class="singleMess form-control position-relative"
-                :class="(element.status === received) ? 'bg-success' : 'bg-danger'"
+                class="singleMess position-relative mt-3 rounded-2"
+                :class="(status = sent) ? 'bg-success' : 'bg-danger' "
               >
-                <span class="position-absolute">{{element.message}}</span>
+                <span class="p-1">{{element.message}}</span>
                 <span
-                  class="position-absolute p-1"
-                  :class="(element.status === received) ? 'end-0 bottom-0' : 'bottom-0 start-0'"
+                  class="position-absolute m-1"
+                  :class="(status = sent) ? 'end-0 bottom-0' : 'bottom-0 start-0'"
                   >{{element.date}}</span
                 >
+              </div>
+            </div>
+            <!-- new message bar -->
+            <div
+              class="newMess bg-body d-flex align-items-center position-absolute bottom-0"
+              style="width: 100%"
+            >
+              <div class="border-end">
+                <button class="btn">
+                  <i class="fas fa-smile"></i>
+                </button>
+              </div>
+              <div class="pe-3" style="width: 100%">
+                <input
+                  type="text"
+                  placeholder="Scrivi un messaggio"
+                  class="form-control border-0"
+                />
+              </div>
+              <div class="border-start">
+                <button class="btn">
+                  <i class="fas fa-microphone"></i>
+                </button>
               </div>
             </div>
           </div>
