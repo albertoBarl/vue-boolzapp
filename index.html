@@ -108,11 +108,31 @@
                   alt="not available"
                   class="rounded-circle"
                 />
-                <label class="fs-5">{{contacts[activeChat].name}}</label>
+                <div>
+                  <label class="fs-5">{{contacts[activeChat].name}}</label
+                  ><br />
+                  <span>Ultimo accesso alle 12:00</span>
+                </div>
               </div>
               <div class="interactions d-flex gap-3 fs-3">
                 <i class="fas fa-search"></i>
                 <i class="fas fa-link"></i>
+              </div>
+            </div>
+
+            <!-- chat content -->
+            <div class="zappChat d-grid">
+              <div
+                v-for="(element, index) in contacts[activeChat].messages"
+                class="singleMess form-control position-relative"
+                :class="(element.status === received) ? 'bg-success' : 'bg-danger'"
+              >
+                <span class="position-absolute">{{element.message}}</span>
+                <span
+                  class="position-absolute p-1"
+                  :class="(element.status === received) ? 'end-0 bottom-0' : 'bottom-0 start-0'"
+                  >{{element.date}}</span
+                >
               </div>
             </div>
           </div>

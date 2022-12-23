@@ -92,3 +92,7 @@
   width: 60%;
   background-color: beige;
 }
+
+.singleMess {
+  min-height: 75px;
+}
