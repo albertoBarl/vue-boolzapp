@@ -91,7 +91,9 @@
                         >{{element.messages[1].message}}</span
                       >
                     </div>
-                    <div class="position-absolute end-0 me-2">12:00</div>
+                    <div class="messDate position-absolute end-0 bottom-0 me-2">
+                      {{element.messages[element.messages.length -1].date }}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -111,7 +113,11 @@
                 <div>
                   <label class="fs-5">{{contacts[activeChat].name}}</label
                   ><br />
-                  <span>Ultimo accesso alle 12:00</span>
+                  <span
+                    >Ultimo accesso alle
+                    {{contacts[activeChat].messages[contacts[activeChat].messages.length
+                    -1].date }}</span
+                  >
                 </div>
               </div>
               <div class="interactions d-flex gap-3 fs-3">
@@ -131,7 +137,7 @@
                 :class="(element.status === 'sent') ? 'backSent' : 'bg-dark' "
               >
                 <span class="p-1">{{element.message}}</span>
-                <span class="position-absolute m-1 end-0 bottom-0"
+                <span class="messDate position-absolute m-1 end-0 bottom-0"
                   >{{element.date}}</span
                 >
               </div>

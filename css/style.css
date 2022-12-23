@@ -102,3 +102,7 @@
   background-color: rgb(50, 75, 50);
   background-size: 100%;
 }
+
+.messDate {
+  font-size: small;
+}

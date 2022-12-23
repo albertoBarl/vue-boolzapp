@@ -9,7 +9,6 @@ createApp({
         myname: "Sofia",
         avatar: "_io",
       },
-
       contacts: [
         {
           name: "Michele",
@@ -175,6 +174,7 @@ createApp({
       ],
     };
   },
+
   methods: {
     showChat(index) {
       this.activeChat = index;
@@ -188,6 +188,15 @@ createApp({
 
       this.contacts[this.activeChat].messages.push(newM);
       this.newM = "";
+
+      setTimeout(() => {
+        let newAns = {
+          date: "15/01/2020 21:32:55",
+          message: "ok",
+          status: "received",
+        };
+        this.contacts[this.activeChat].messages.push(newAns);
+      }, 1000);
     },
   },
 }).mount("#appBoolzapp");
