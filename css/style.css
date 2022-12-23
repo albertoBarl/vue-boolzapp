@@ -14,10 +14,15 @@
   height: 100vh;
 }
 
+i {
+  cursor: pointer;
+}
+
 /* ========================= CONTAINER ========================= */
 .zappContainer {
   width: 90vw;
   height: 90vh;
+  outline: 3px solid black;
 }
 
 /* topbar */
