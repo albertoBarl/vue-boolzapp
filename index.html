@@ -57,17 +57,12 @@
               <div class="chatsSect">
                 <!-- search bar -->
                 <div class="searchZapp d-flex align-items-center ps-2">
-                  <div class="border-end">
-                    <button class="btn">
-                      <i class="fas fa-search"></i>
-                    </button>
-                  </div>
                   <div class="pe-3" style="width: 100%">
                     <input
                       type="text"
                       placeholder="Cerca o inizia una nuova chat"
-                      class="form-control border-0"
-                      v-bind="search"
+                      class="form-control"
+                      v-model="search"
                     />
                   </div>
                 </div>
@@ -76,7 +71,7 @@
                 <div class="othersChat overflow-auto">
                   <div
                     class="singlePerson d-flex position-relative"
-                    v-for="(element, index) in contacts"
+                    v-for="(element, index) in filteredList"
                     @click="showChat(index)"
                   >
                     <div class="Avat me-2 p-2">

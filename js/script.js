@@ -177,6 +177,7 @@ createApp({
   },
   computed: {
     filteredList() {
+      console.log("sono qui");
       return this.contacts.filter((contact) => {
         return contact.name.toLowerCase().includes(this.search.toLowerCase());
       });
