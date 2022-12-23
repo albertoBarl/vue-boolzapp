@@ -5,6 +5,7 @@ createApp({
     return {
       activeChat: 0,
       newMess: "",
+      search: "",
       user: {
         myname: "Sofia",
         avatar: "_io",
@@ -174,7 +175,13 @@ createApp({
       ],
     };
   },
-
+  computed: {
+    filteredList() {
+      return this.contacts.filter((contact) => {
+        return contact.name.toLowerCase().includes(this.search.toLowerCase());
+      });
+    },
+  },
   methods: {
     showChat(index) {
       this.activeChat = index;
