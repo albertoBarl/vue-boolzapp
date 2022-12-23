@@ -124,16 +124,14 @@
             <div
               class="zappChat px-3 d-flex flex-column"
               v-for="(element, index) in contacts[activeChat].messages"
-              :class="(status = sent) ? 'justify-content-end' : 'justify-content-start' "
+              :class="(element.status === 'sent') ? 'align-items-end' : 'align-items-start' "
             >
               <div
-                class="singleMess position-relative mt-3 rounded-2"
-                :class="(status = sent) ? 'bg-success' : 'bg-danger' "
+                class="singleMess position-relative mt-3 rounded-2 text-white"
+                :class="(element.status === 'sent') ? 'backSent' : 'bg-dark' "
               >
                 <span class="p-1">{{element.message}}</span>
-                <span
-                  class="position-absolute m-1"
-                  :class="(status = sent) ? 'end-0 bottom-0' : 'bottom-0 start-0'"
+                <span class="position-absolute m-1 end-0 bottom-0"
                   >{{element.date}}</span
                 >
               </div>
@@ -153,6 +151,8 @@
                   type="text"
                   placeholder="Scrivi un messaggio"
                   class="form-control border-0"
+                  @keyup.enter="addMessage"
+                  v-model="newM"
                 />
               </div>
               <div class="border-start">

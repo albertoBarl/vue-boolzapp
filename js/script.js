@@ -4,6 +4,7 @@ createApp({
   data() {
     return {
       activeChat: 0,
+      newMess: "",
       user: {
         myname: "Sofia",
         avatar: "_io",
@@ -177,6 +178,16 @@ createApp({
   methods: {
     showChat(index) {
       this.activeChat = index;
+    },
+    addMessage() {
+      let newM = {
+        date: "15/01/2020 21:31:55",
+        message: this.newM,
+        status: "sent",
+      };
+
+      this.contacts[this.activeChat].messages.push(newM);
+      this.newM = "";
     },
   },
 }).mount("#appBoolzapp");
