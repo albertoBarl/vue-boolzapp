@@ -14,6 +14,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </head>
   <body>
     <div class="myContainer d-flex justify-content-center pt-4">
@@ -76,13 +77,14 @@
                   >
                     <div class="Avat me-2 p-2">
                       <img
-                        :src="`./img/avatar${contacts[index].avatar}.jpg`"
+                        :src="`./img/avatar${filteredList[index].avatar}.jpg`"
                         alt="not available"
                         class="rounded-circle"
                       />
                     </div>
                     <div>
-                      <span class="fs-4">{{contacts[index].name}}</span><br />
+                      <span class="fs-4">{{filteredList[index].name}}</span
+                      ><br />
                       <span class="text-secondary"
                         >{{element.messages[1].message}}</span
                       >
@@ -169,7 +171,6 @@
     </div>
 
     <!-- script links -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>
