@@ -190,12 +190,12 @@ createApp({
     addMessage() {
       let newM = {
         date: "15/01/2020 21:31:55",
-        message: this.newM,
+        message: this.newMess,
         status: "sent",
       };
 
       this.contacts[this.activeChat].messages.push(newM);
-      this.newM = "";
+      this.newMess = "";
 
       setTimeout(() => {
         let newAns = {
